@@ -10,14 +10,18 @@ import kotlin.random.Random
 class GridRVActivity : BaseActivity() {
     override fun initView() {
         val recyclerView = findViewById<RecyclerView>(R.id.test_rv)
-        recyclerView.layoutManager = GridLayoutManager(this, 4)
+        //recyclerView.layoutManager = GridLayoutManager(this, 4)
+        //水平
+        recyclerView.layoutManager = GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false)
+        //竖直
+        //recyclerView.layoutManager = GridLayoutManager(this, 4, GridLayoutManager.VERTICAL, false)
         //recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.horizontal, false)
         recyclerView.adapter = TestAdapter(initData())
     }
 
     private fun initData(): List<TestAdapter.Bean?> {
         val list = mutableListOf<TestAdapter.Bean>()
-        repeat(2) {
+        repeat(5) {
             list.add(TestAdapter.Bean(R.drawable.ic_baseline_3d_rotation_24, getName("3d_rotation_24")))
             list.add(TestAdapter.Bean(R.drawable.ic_baseline_ac_unit_24, getName("ac_unit_24")))
             list.add(TestAdapter.Bean(R.drawable.ic_baseline_access_alarm_24, getName("access_alarm_24")))
@@ -30,7 +34,6 @@ class GridRVActivity : BaseActivity() {
         }
         return list
     }
-
 
 
     override fun getLayoutId(): Int {

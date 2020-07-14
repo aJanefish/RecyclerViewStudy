@@ -10,7 +10,9 @@ class WaterfallRVActivity : BaseActivity() {
     override fun initView() {
         val recyclerView = findViewById<RecyclerView>(R.id.test_rv)
         //recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        //水平
         recyclerView.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.HORIZONTAL)
+        //竖直
         //recyclerView.layoutManager = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
         recyclerView.adapter = TestAdapter(initData())
     }
