@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.VerticalTestActivity"></activity>
+        <activity android:name=".activity.StudyOneActivity"></activity>
+        <activity android:name=".activity.VerticalTestActivity" />
         <activity android:name=".activity.WaterfallRVActivity" />
         <activity android:name=".activity.GridRVActivity" />
         <activity android:name=".activity.HorizontalActivity" />

@@ -25,4 +25,12 @@ abstract class BaseActivity : AppCompatActivity() {
             toString()
         })
     }
+
+    internal fun getName(name: String, flag: Boolean): String {
+        return if (flag){
+            name
+        }else{
+            getName(name)
+        }
+    }
 }

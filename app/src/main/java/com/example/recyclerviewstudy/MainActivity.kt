@@ -28,7 +28,7 @@ class MainActivity : BaseActivity() {
         list.add(MainAdapter.Bean("水平RecyclerView", HorizontalActivity::class.java))
         list.add(MainAdapter.Bean("Grid RecyclerView", GridRVActivity::class.java))
         list.add(MainAdapter.Bean("瀑布 RecyclerView", WaterfallRVActivity::class.java))
-        list.add(MainAdapter.Bean("普通RecyclerView", MainActivity::class.java))
+        list.add(MainAdapter.Bean("RecyclerView 缓存机制研究1", StudyOneActivity::class.java))
         return list
     }
 }
