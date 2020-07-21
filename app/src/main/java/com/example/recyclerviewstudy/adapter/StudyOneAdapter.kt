@@ -26,17 +26,17 @@ class StudyOneAdapter(list: List<Bean?>) : RecyclerView.Adapter<StudyOneAdapter.
         Log.d(sTAG, "onCreateViewHolder")
         mCreateNum++
         val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_study_one_item, parent, false)
-        when (viewType) {
-            0 -> return TestHolder(view)
-            1 -> return TestHolder(view)
-            else -> return TestHolder(view)
+        return when (viewType) {
+            0 -> TestHolder(view)
+            1 -> TestHolder(view)
+            else -> TestHolder(view)
         }
     }
 
     //绑定数据，如果有复用会直接返回复用的Holder
     override fun onBindViewHolder(holder: TestHolder, position: Int) {
         mHolderList.add(holder)
-        Log.d(sTAG, "onBindViewHolder $mCreateNum ${mHolderList.size} ${holder.lastPosition} <-> $position $holder ")
+        Log.d(sTAG, "onBindViewHolder mCreateNum=$mCreateNum mHolderList.size=${mHolderList.size}  lastPosition=${holder.lastPosition} --> nowPosition=$position $holder ")
         holder.newPosition = position
         holder.onBind(mList[position])
     }
